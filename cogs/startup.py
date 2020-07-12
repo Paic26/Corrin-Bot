@@ -16,7 +16,7 @@ def get_prefix(client, message):
 bot = commands.Bot(command_prefix = get_prefix, case_insensitive=True)
 Bot = discord.client
 client = bot
-status = cycle(['', '', '/help For Help'])
+status = cycle(['I hate my job', 'PogChamp', '/help For Help'])
 client.remove_command('help')
 
 class Startup(commands.Cog):
