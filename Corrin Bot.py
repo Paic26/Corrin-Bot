@@ -81,4 +81,4 @@ async def shutdown(ctx):
 
 
 
-bot.run('NzMxNjMwMDYwMDU4MTgxNjg0.Xwo2Rw.yHz3nqG0iCtcbHLUcj8TfhTDgdU')
+bot.run(os.environ['DISCORD_TOKEN'])
