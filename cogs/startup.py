@@ -26,7 +26,6 @@ class Startup(commands.Cog):
         #Events 『で』⛩┊lounge
     @commands.Cog.listener()
     async def on_ready(self):
-        self.change_status.start()
         print('Startup Cog is on')
 
     @commands.Cog.listener()
