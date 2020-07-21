@@ -16,7 +16,6 @@ def get_prefix(client, message):
 bot = commands.Bot(command_prefix = get_prefix, case_insensitive=True)
 Bot = discord.client
 client = bot
-status = cycle(['I hate my job', 'PogChamp', '/help For Help'])
 client.remove_command('help')
 
 class Startup(commands.Cog):
@@ -51,10 +50,6 @@ class Startup(commands.Cog):
     @commands.Cog.listener()
     async def on_member_remove(self, member):
         print(f'{member} has left a server')
-
-    @tasks.loop(seconds=12.5)
-    async def change_status(self):
-        await self.bot.change_presence(activity=discord.Game(next(status)))
 
     @commands.command(name='reload', description="Reload all/one of the bots cogs!")
     @commands.is_owner()
