@@ -80,7 +80,7 @@ async def shutdown(ctx):
     await bot.close()
 
 @bot.command()
-commands.is_owner()
+@commands.is_owner()
 async def status(ctx, *, sts):
     await client.change_presence(status=discord.Status.online, activity=discord.Game(f"{sts}"))
 
